@@ -19,7 +19,7 @@ st.write("""
          """)
 
 password = st.text_input('Для доступа введите пароль:')
-if password != 'inna':
+if password != 'Inna':
     st.write('Нет доступа')
 else:
     df = pd.DataFrame({'ГРБС':['056','149','388'],'Вид расходов':[500,600,400],'БА':[10000.0,20000.0,30000.0]})
