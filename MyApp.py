@@ -18,7 +18,7 @@ st.write("""
          Аналитическая часть *для инспекторов*
          """)
 st.write('Доступ ограничен')
-password = st.text_input('Для доступа введите пароль:')
+password = st.text_input('Для доступа введите пароль:', type='password')
 if password != 'Inna':
     st.write('НЕТ ДОСТУПА')
 else:
