@@ -13,15 +13,16 @@ st.set_page_config(
     layout="wide"
 )
 
-st.write("""
-         # NEW - Электронный бюджет 
-         Аналитическая часть *для инспекторов*
-         Комплексная модель
-         """)
+st.header('Аналитический центр - MyAudit')
+st.subheader('Комплексная модель автоматизированного поиска рисков нарушений')
+st.write('(переход от выборочных проверок к сплошному автоматизированному контролю федерального бюджета)') 
+
+
 st.write('Доступ ограничен')
 password = st.text_input('Для доступа введите пароль:', type='password')
 if password != 'Inna':
     st.write('НЕТ ДОСТУПА')
 else:
-    df = pd.DataFrame({'ГРБС':['056','149','388'],'Вид расходов':[500,600,400],'БА':[10000.0,20000.0,30000.0]})
+    df = pd.read_excel('https://docs.google.com/spreadsheets/d/1C7UYTDLsPcgmngE45VEH17buU8onkU1q/edit?usp=sharing&ouid=100184939205193698727&rtpof=true&sd=true')
+    st.subheader('Анализ ФАИП на 01.10.2023')
     st.write(df)
