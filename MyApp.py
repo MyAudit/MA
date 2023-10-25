@@ -1,3 +1,6 @@
+# C:\Users\User>cd C:\Users\User\Documents\IDE_Github
+# C:\Users\User\Documents\АЦСПРФ>streamlit run MyApp.py
+ 
 #  You can now view your Streamlit app in your browser.
 
 #  Local URL: http://localhost:8501
@@ -23,6 +26,12 @@ password = st.text_input('Для доступа введите пароль:', t
 if password != 'Inna':
     st.write('НЕТ ДОСТУПА')
 else:
-    df = pd.read_excel('https://docs.google.com/spreadsheets/d/1C7UYTDLsPcgmngE45VEH17buU8onkU1q/edit?usp=sharing&ouid=100184939205193698727&rtpof=true&sd=true')
+    
+    df = pd.read_excel('https://github.com/MyAudit/MA/raw/master/!%202023%2010%2001%20faip_sravnenie_k%202023%2010%2025_1.xlsx')
+    
     st.subheader('Анализ ФАИП на 01.10.2023')
     st.write(df)
+    
+   
+
+
