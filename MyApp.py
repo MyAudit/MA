@@ -28,21 +28,22 @@ password = st.text_input('Для доступа введите пароль:', t
 if password != 'Inna':
     st.write('НЕТ ДОСТУПА')
 else:
-    gsheet = st.sidebar.checkbox('gsheet прямо')
-    if gsheet:
-        st.subheader('Анализ gsheet прямо')
-        # df = pd.read_excel('https://docs.google.com/spreadsheets/d/1C7UYTDLsPcgmngE45VEH17buU8onkU1q/edit?usp=sharing&ouid=100184939205193698727&rtpof=true&sd=true')
-        df = pd.read_excel('https://docs.google.com/spreadsheets/d/1C7UYTDLsPcgmngE45VEH17buU8onkU1q/export?format=csv&gid=1017825111')
+    gsheet_excel = st.sidebar.checkbox('gsheet_excel')
+    if gsheet_excel:
+        st.subheader('Анализ gsheet_excel')
+        df = pd.read_excel('https://docs.google.com/spreadsheets/d/1C7UYTDLsPcgmngE45VEH17buU8onkU1q/edit?usp=sharing&ouid=100184939205193698727&rtpof=true&sd=true')
+        # df = pd.read_excel('https://docs.google.com/spreadsheets/d/1C7UYTDLsPcgmngE45VEH17buU8onkU1q/export?format=csv&gid=1017825111')
         st.write(df)
         
         
-    gsheet = st.sidebar.checkbox('gsheet через git')
-    if gsheet:
-        st.subheader('Анализ gsheet через git')
+    gsheet_csv = st.sidebar.checkbox('gsheet_csv')
+    if gsheet_csv:
+        st.subheader('Анализ gsheet_csv')
         # df = pd.read_excel('https://docs.google.com/spreadsheets/d/1C7UYTDLsPcgmngE45VEH17buU8onkU1q/edit?usp=sharing&ouid=100184939205193698727&rtpof=true&sd=true')
-        df = pd.read_excel('https://docs.google.com/spreadsheets/d/1C7UYTDLsPcgmngE45VEH17buU8onkU1q/export?format=csv&gid=1017825111')
+        df = pd.read_csv('https://docs.google.com/spreadsheets/d/1C7UYTDLsPcgmngE45VEH17buU8onkU1q/export?format=csv&gid=1017825111')
         st.write(df)
-    
+        
+        
     git = st.sidebar.checkbox('git файл и папки')
     if git:
         st.subheader('Анализ git файл и папки')
